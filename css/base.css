@@ -1,0 +1,91 @@
+/* TEMPLATE STYLES */
+
+    /* Necessary for full page carousel*/
+
+    .full-height,
+    .full-height body,
+    .full-height header,
+    .full-height header .view,
+    .full-height body .view {
+      height: 100%;
+    }
+
+    @media (max-width: 740px) {
+      .full-height,
+      .full-height body,
+      .full-height header,
+      .full-height header .view,
+      .full-height body .view {
+        height: 700px;
+      }
+    }
+
+    @media (min-width: 1000px) and (max-width: 1025px) {
+      .full-height,
+      .full-height body,
+      .full-height header,
+      .full-height header .view,
+      .full-height body .view {
+        height: 770px;
+      }
+    }
+
+    .navbar {
+      background-color: transparent;
+    }
+
+    .scrolling-navbar {
+      -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
+      -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
+      transition: background .5s ease-in-out, padding .5s ease-in-out;
+    }
+
+    .top-nav-collapse {
+      background-color: #1C2331;
+    }
+
+    footer.page-footer {
+      background-color: #1C2331;
+      margin-top: 0;
+    }
+
+    @media only screen and (max-width: 768px) {
+      .navbar {
+        background-color: #1C2331;
+      }
+    }
+
+    /* Carousel*/
+
+    .carousel,
+    .carousel-item,
+    .active {
+      height: 100%;
+    }
+
+    .carousel-inner {
+      height: 100%;
+    }
+
+    /*Caption*/
+
+    .flex-center {
+      color: #fff;
+    }
+
+    @media (min-width: 776px) {
+      .carousel .view ul li {
+        display: inline;
+      }
+      .carousel .view .full-bg-img ul li .flex-item {
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    .navbar .btn-group .dropdown-menu a:hover {
+      color: #000 !important;
+    }
+
+    .navbar .btn-group .dropdown-menu a:active {
+      color: #fff !important;
+    }
