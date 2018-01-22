@@ -17,20 +17,19 @@
       <!-- Nav tabs -->
       <ul class="nav md-pills flex-center flex-wrap mx-0" role="tablist">
         <li class="nav-item">
-          <a class="nav-link active font-bold" data-toggle="tab" href="#panel31" role="tab">
-                  ALL</a>
+          <a class="nav-link active font-bold" data-toggle="tab" href="#panel31" role="tab">Logo Design</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link font-bold" data-toggle="tab" href="#panel32" role="tab">
-                    BRANDING</a>
+          <a class="nav-link font-bold" data-toggle="tab" href="#panel32" role="tab">Business Card</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link font-bold" data-toggle="tab" href="#panel33" role="tab">
-                      PACKAGING</a>
+          <a class="nav-link font-bold" data-toggle="tab" href="#panel33" role="tab">Banner Ad</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link font-bold" data-toggle="tab" href="#panel34" role="tab">
-                        PRINT DESIGN</a>
+          <a class="nav-link font-bold" data-toggle="tab" href="#panel34" role="tab">T-shirt Design</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link font-bold" data-toggle="tab" href="#panel35" role="tab">Photo Editing</a>
         </li>
       </ul>
     </div>
@@ -246,6 +245,33 @@
         </div>
         <!--/First row-->
       </div>
+      <!--Panel 5-->
+      <div class="tab-pane fade" id="panel35" role="tabpanel">
+        <br>
+        <!--First row-->
+        <div class="row ml-5 mr-5 mt-2">
+          <!--First column-->
+          <div class="col-lg-3 col-md-6">
+            <!--Featured image-->
+            <div class="card overlay hm-white-slight hm-zoom z-depth-2">
+              <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/project1.jpg">
+            </div>
+            <p class="font-up text-center font-bold blue-grey-text mt-4 mb-4">Lorem ipsum dolor sit amet</p>
+          </div>
+          <!--/First column-->
+          <!--Second column-->
+          <div class="col-lg-3 col-md-6">
+            <!--Featured image-->
+            <div class="card overlay hm-white-slight hm-zoom z-depth-2">
+              <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/project7.jpg">
+            </div>
+            <p class="font-up text-center font-bold blue-grey-text mt-4 mb-4">Lorem ipsum dolor sit amet</p>
+          </div>
+          <!--/Second column-->
+        </div>
+        <!--/First row-->
+      </div>
+      <!--/.Panel 5-->
     </div>
     <!--/.Panel 4-->
   </div>

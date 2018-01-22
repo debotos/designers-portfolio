@@ -45,6 +45,7 @@ else {
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <link href="assets/css/custom.css" rel="stylesheet" type="text/css" />
+      <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
     </head>
 
     <body>
@@ -74,6 +75,38 @@ else {
           
           if(isset($_GET['admin_delete'])){
             include("admin_delete.php");
+          }
+  
+          if(isset($_GET['design_category'])){
+            include("design_category.php");
+          }
+          
+          if(isset($_GET['category_delete'])){
+            include("category_delete.php");
+          }
+          
+          if(isset($_GET['category_add'])){
+            include("category_add.php");
+          }
+          
+          if(isset($_GET['all_designs'])){
+            include("all_designs.php");
+          }
+  
+          if(isset($_GET['design_delete'])){
+            include("design_delete.php");
+          }
+  
+          if(isset($_GET['design_edit'])){
+            include("design_edit.php");
+          }
+  
+          if(isset($_GET['add_design'])){
+            include("add_design.php");
+          }
+          
+          if(isset($_GET['social_link_info'])){
+            include("social_link_info.php");
           }
 
         ?>
@@ -109,7 +142,7 @@ else {
           });
           $('select').material_select();
           $('.collapsible').collapsible();
-
+//          $('select').material_select('destroy');
         </script>
         <script src="../js/jquery-3.2.1.min.js"></script>
     </body>

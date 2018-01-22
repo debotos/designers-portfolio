@@ -21,28 +21,28 @@ else {
         <div class="row">
           <div class="input-field col s12">
             <input id="admin_name" type="text" name="admin_name" class="validate" required>
-            <label for="first_name">Admin Name
+            <label for="admin_name">Admin Name
             </label>
           </div>
         </div>
         <div class="row">
           <div class="input-field col s12">
             <input id="admin_email" type="email" name="admin_email" class="validate" required>
-            <label for="first_name">Admin Email
+            <label for="admin_email">Admin Email
             </label>
           </div>
         </div>
         <div class="row">
           <div class="input-field col s12">
             <input id="admin_pass" type="password" name="admin_pass" class="validate" required>
-            <label for="first_name">Admin Password
+            <label for="admin_pass">Admin Password
             </label>
           </div>
         </div>
         <div class="row">
           <div class="input-field col s12">
             <input id="admin_contact" type="text" name="admin_contact" class="validate" required>
-            <label for="first_name">Admin Contact
+            <label for="admin_contact">Admin Contact
             </label>
           </div>
         </div>
