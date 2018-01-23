@@ -108,6 +108,26 @@ else {
           if(isset($_GET['social_link_info'])){
             include("social_link_info.php");
           }
+  
+          if(isset($_GET['testimonial_add'])){
+            include("testimonial_add.php");
+          }
+  
+          if(isset($_GET['testimonial_list'])){
+            include("testimonial_list.php");
+          }
+          
+          if(isset($_GET['testimonial_edit'])){
+            include("testimonial_edit.php");
+          }
+  
+          if(isset($_GET['testimonial_delete'])){
+            include("testimonial_delete.php");
+          }
+  
+          if(isset($_GET['about'])){
+            include("about.php");
+          }
 
         ?>
 

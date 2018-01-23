@@ -21,7 +21,7 @@ else {
   <section class="content">
     <div class="page-announce valign-wrapper"><a href="#" data-activates="slide-out" class="button-collapse valign hide-on-large-only"><i class="material-icons">menu</i></a>
       <h1 class="page-announce-text valign">Your Information </h1> </div>
-    <!--Main coading of Dashboard Start-->
+    <!--Main coading of social link and info page Start-->
     <div class="row" style="padding-left: 5%; padding-right: 5%;">
       <!--Facebook-->
       <form method="post" action="" class="col s12">
@@ -329,6 +329,6 @@ else {
       
     ?>
       <!--./Form Submit Handling-->
-      <!--./Main coading of Dashboard Ends-->
+      <!--./Main coading of social link and info page Ends-->
   </section>
   <?php } ?>

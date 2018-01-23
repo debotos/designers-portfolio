@@ -42,13 +42,6 @@ $admin_contact = $row_admin['admin_contact'];
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input id="admin_email" type="email" name="admin_email" class="validate" value="<?php echo $admin_email; ?>" required>
-          <label for="first_name">Admin Email
-          </label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
           <input id="admin_pass" type="password" name="admin_pass" class="validate" required>
           <label for="first_name">Admin Password
           </label>
@@ -91,27 +84,51 @@ $admin_contact = $row_admin['admin_contact'];
   <!--Main coading of Edit Admin Profile Ends-->
 </section>
 <?php
-if(isset($_POST['update'])){
-$admin_name = $_POST['admin_name'];
-$admin_email = $_POST['admin_email'];
-$admin_pass = $_POST['admin_pass'];
-$admin_contact = $_POST['admin_contact'];
-$admin_image = $_FILES['admin_image']['name'];
-$temp_admin_image = $_FILES['admin_image']['tmp_name'];
-move_uploaded_file($temp_admin_image,"assets/img/admin/$admin_image");
-if(empty($admin_image)){
-  $admin_image = $new_admin_image;
-}else{
-  $filename = "assets/img/admin/$new_admin_image";
-  unlink($filename);  
-}
-$update_admin = "update admins set admin_name='$admin_name',admin_email='$admin_email',admin_pass='$admin_pass',admin_image='$admin_image',admin_contact='$admin_contact' where admin_id='$admin_id'";
-$run_admin = mysqli_query($con,$update_admin);
-if($run_admin){
-echo "<script>alert('User Has Been Updated successfully and login again')</script>";
-echo "<script>window.open('login.php','_self')</script>";
-session_destroy();
-}
+  if(isset($_POST['update'])){
+    $admin_name = $_POST['admin_name'];
+    $admin_pass = $_POST['admin_pass'];
+    $admin_contact = $_POST['admin_contact'];
+    $admin_image = $_FILES['admin_image']['name'];
+    $temp_admin_image = $_FILES['admin_image']['tmp_name'];
+    $file_type = $_FILES['admin_image']['type'];  
+    $allowed = array("image/jpeg", "image/gif", "image/png");
+
+    if(!empty($admin_image)){
+      if(!in_array($file_type, $allowed)) {
+      echo "<script>alert('Only jpg, gif, and png files are allowed!')</script>";
+      echo "<script>window.open('index.php?edit_admin_profile=$edit_id','_self')</script>";
+      }else{
+        move_uploaded_file($temp_admin_image,"assets/img/admin/$admin_image");
+        if(empty($admin_image)){
+          $admin_image = $new_admin_image;
+        }else{
+          $filename = "assets/img/admin/$new_admin_image";
+          unlink($filename);  
+        }
+        $update_admin = "update admins set admin_name='$admin_name',admin_email='$admin_email',admin_pass='$admin_pass',admin_image='$admin_image',admin_contact='$admin_contact' where admin_id='$admin_id'";
+        $run_admin = mysqli_query($con,$update_admin);
+        if($run_admin){
+        echo "<script>alert('User Has Been Updated successfully and login again')</script>";
+        echo "<script>window.open('login.php','_self')</script>";
+        session_destroy();
+        }
+      }
+    }else{
+      move_uploaded_file($temp_admin_image,"assets/img/admin/$admin_image");
+      if(empty($admin_image)){
+        $admin_image = $new_admin_image;
+      }else{
+        $filename = "assets/img/admin/$new_admin_image";
+        unlink($filename);  
+      }
+      $update_admin = "update admins set admin_name='$admin_name',admin_email='$admin_email',admin_pass='$admin_pass',admin_image='$admin_image',admin_contact='$admin_contact' where admin_id='$admin_id'";
+      $run_admin = mysqli_query($con,$update_admin);
+      if($run_admin){
+      echo "<script>alert('User Has Been Updated successfully and login again')</script>";
+      echo "<script>window.open('login.php','_self')</script>";
+      session_destroy();
+    } 
+  }
 }
 ?>
 <?php }  ?>

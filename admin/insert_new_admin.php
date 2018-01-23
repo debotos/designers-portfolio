@@ -46,14 +46,18 @@ else {
             </label>
           </div>
         </div>
-        <div class="file-field input-field">
-          <div class="btn">
-            <span>Admin Image
-          </span>
-            <input type="file" name="admin_image" required>
-          </div>
-          <div class="file-path-wrapper">
-            <input class="file-path validate" type="text">
+
+        <div class="row">
+          <div class="input-field col s12">
+            <div class="file-field input-field">
+              <div class="btn">
+                <span>Admin Image</span>
+                <input type="file" name="admin_image" required>
+              </div>
+              <div class="file-path-wrapper">
+                <input class="file-path validate" type="text">
+              </div>
+            </div>
           </div>
         </div>
 
@@ -70,18 +74,35 @@ else {
     <!-- Main row Ends -->
     <?php
 if(isset($_POST['submit'])){
-$admin_name = $_POST['admin_name'];
-$admin_email = $_POST['admin_email'];
-$admin_pass = $_POST['admin_pass'];
-$admin_contact = $_POST['admin_contact'];
-$admin_image = $_FILES['admin_image']['name'];
-$temp_admin_image = $_FILES['admin_image']['tmp_name'];
-move_uploaded_file($temp_admin_image,"assets/img/admin/$admin_image");
-$insert_admin = "insert into admins (admin_name,admin_email,admin_pass,admin_image,admin_contact) values ('$admin_name','$admin_email','$admin_pass','$admin_image','$admin_contact')";
-$run_admin = mysqli_query($con,$insert_admin);
-if($run_admin){
-  echo "<script>window.open('index.php?view_admins','_self')</script>";
-}
+  $admin_name = $_POST['admin_name'];
+  $admin_email = $_POST['admin_email'];
+  $admin_pass = $_POST['admin_pass'];
+  $admin_contact = $_POST['admin_contact'];
+  $admin_image = $_FILES['admin_image']['name'];
+  $temp_admin_image = $_FILES['admin_image']['tmp_name'];
+  $file_type = $_FILES['admin_image']['type'];  
+  $allowed = array("image/jpeg", "image/gif", "image/png");
+
+  $query_email_exist = "SELECT * FROM `admins` WHERE admin_email='$admin_email'";
+  $run_query_email_exist = mysqli_query($con, $query_email_exist);
+  $mail_count = mysqli_num_rows($run_query_email_exist);
+
+  if($mail_count > 0) {
+    echo "<script>alert('Sorry! Email Already Exist!')</script>";
+    echo "<script>window.open('index.php?insert_new_admin','_self')</script>";
+  }else{
+    if(!in_array($file_type, $allowed)) {
+    echo "<script>alert('Only jpg, gif, and png files are allowed!')</script>";
+    echo "<script>window.open('index.php?insert_new_admin','_self')</script>";
+    }else{
+      move_uploaded_file($temp_admin_image,"assets/img/admin/$admin_image");
+      $insert_admin = "insert into admins (admin_name,admin_email,admin_pass,admin_image,admin_contact) values ('$admin_name','$admin_email','$admin_pass','$admin_image','$admin_contact')";
+      $run_admin = mysqli_query($con,$insert_admin);
+      if($run_admin){
+        echo "<script>window.open('index.php?view_admins','_self')</script>";
+      }
+    }
+  }
 }
 ?>
       <!--Main coading of Insert New Admin Ends-->

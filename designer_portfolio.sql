@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 22, 2018 at 03:37 PM
+-- Generation Time: Jan 23, 2018 at 06:41 PM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.8
 
@@ -21,6 +21,26 @@ SET time_zone = "+00:00";
 --
 -- Database: `designer_portfolio`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `about`
+--
+
+CREATE TABLE `about` (
+  `id` int(3) NOT NULL,
+  `first_name` varchar(50) NOT NULL,
+  `full_name` varchar(100) NOT NULL,
+  `who_am_i` varchar(1000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `about`
+--
+
+INSERT INTO `about` (`id`, `first_name`, `full_name`, `who_am_i`) VALUES
+(1, 'Debotos', 'Debotos Das', 'On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who  every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted.');
 
 -- --------------------------------------------------------
 
@@ -114,9 +134,37 @@ CREATE TABLE `info` (
 INSERT INTO `info` (`id`, `facebook_profile`, `twitter_profile`, `google_plus_profile`, `youtube_profile`, `instagram_profile`, `upwork_profile`, `freelancer_profile`, `mail`, `address`, `phone`) VALUES
 (1, 'https://twitter.com/debotos', 'https://twitter.com/debotos', 'https://twitter.com/debotos', 'https://twitter.com/debotos', 'https://twitter.com/debotos', 'https://twitter.com/debotos', 'https://twitter.com/debotos', 'debotosdas@gmail.com', 'https://twitter.com/debotos', 'https://twitter.com/debotos');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `testimonial`
+--
+
+CREATE TABLE `testimonial` (
+  `id` int(11) NOT NULL,
+  `name` varchar(70) NOT NULL,
+  `image` varchar(255) NOT NULL,
+  `position` varchar(100) NOT NULL,
+  `star` decimal(5,1) NOT NULL,
+  `description` varchar(1000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `testimonial`
+--
+
+INSERT INTO `testimonial` (`id`, `name`, `image`, `position`, `star`, `description`) VALUES
+(2, 'Debotos Das', '5a6752298f7bb_download.png', 'Full Stack Web Developer', '4.5', '            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.          ');
+
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `about`
+--
+ALTER TABLE `about`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `admins`
@@ -143,14 +191,26 @@ ALTER TABLE `info`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `testimonial`
+--
+ALTER TABLE `testimonial`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `about`
+--
+ALTER TABLE `about`
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `admins`
 --
 ALTER TABLE `admins`
-  MODIFY `admin_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `admin_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `category`
@@ -169,6 +229,12 @@ ALTER TABLE `design`
 --
 ALTER TABLE `info`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `testimonial`
+--
+ALTER TABLE `testimonial`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

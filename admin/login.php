@@ -647,7 +647,10 @@ include("includes/db.php");
     }
     else {
 
-      echo "<script>alert('Email or Password is Wrong')</script>";
+      echo "<script>$('form').addClass('wrong-entry');
+      setTimeout(function() {
+        $('form').removeClass('wrong-entry');
+      }, 3000);</script>";
 
     }
 

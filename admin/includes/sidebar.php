@@ -41,19 +41,13 @@ $admin_contact = $row_admin['admin_contact'];
     <div class="divider">
     </div>
   </li>
-  <!--<li><a class="subheader">Management</a></li>
-<li><a href="names.html"><i class="material-icons pink-item">thumbs_up_down</i>Name Approvals</a></li>
-<li><a href="comments.html"><i class="material-icons pink-item">note_add</i>News Comments</a></li>-->
+  <li><a href="index.php?about"><i class="material-icons pink-item">account_circle</i>About You</a></li>
+  
   <li>
     <a href="index.php?social_link_info">
       <i class="material-icons pink-item">info_outline
       </i>Social Link & Info
     </a>
-  </li>
-  
-  <li>
-    <div class="divider">
-    </div>
   </li>
   
   <li class="no-padding" style="margin-left: 15px;">
@@ -66,7 +60,7 @@ $admin_contact = $row_admin['admin_contact'];
         <div class="collapsible-body">
           <ul>
             <li>
-              <a href="index.php?design_category">Manage Design Category
+              <a href="index.php?design_category">Manage Category
               </a>
             </li>
             <li>
@@ -82,12 +76,36 @@ $admin_contact = $row_admin['admin_contact'];
       </li>
     </ul>
   </li>
-  
   <li>
     <div class="divider">
     </div>
   </li>
-  
+  <li class="no-padding" style="margin-left: 15px;">
+    <ul class="collapsible collapsible-accordion">
+      <li>
+        <a class="collapsible-header">TESTIMONIALS
+          <i class="material-icons pink-item">face
+          </i>
+        </a>
+        <div class="collapsible-body">
+          <ul>
+            <li>
+              <a href="index.php?testimonial_add">Add Testimonial
+              </a>
+            </li>
+            <li>
+              <a href="index.php?testimonial_list">Testimonial List
+              </a>
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <div class="divider">
+    </div>
+  </li>
   <li class="no-padding" style="margin-left: 15px;">
     <ul class="collapsible collapsible-accordion">
       <li>
@@ -106,7 +124,7 @@ $admin_contact = $row_admin['admin_contact'];
               </a>
             </li>
             <li>
-              <a href="index.php?edit_admin_profile=<?php echo $admin_id; ?>">Edit Current Admin Profile
+              <a href="index.php?edit_admin_profile=<?php echo $admin_id; ?>">Edit Current Profile
               </a>
             </li>
           </ul>
@@ -114,12 +132,10 @@ $admin_contact = $row_admin['admin_contact'];
       </li>
     </ul>
   </li>
-  
   <li>
     <div class="divider">
     </div>
   </li>
-  
   <li>
     <a href="logout.php">
       <i class="material-icons pink-item">remove_circle
