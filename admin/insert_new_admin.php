@@ -28,7 +28,7 @@ else {
         <div class="row">
           <div class="input-field col s12">
             <input id="admin_email" type="email" name="admin_email" class="validate" required>
-            <label for="admin_email">Admin Email
+            <label for="admin_email" data-error="wrong" data-success="right">Admin Email
             </label>
           </div>
         </div>

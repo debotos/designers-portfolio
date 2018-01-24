@@ -61,11 +61,12 @@ else {
           </label>
         </div>
       </div>
-      <div class="row">
+      <div class="row" style="display: flex; flex-direction: row;">
+       <img src="assets/img/testimonial/<?Php echo $current_testimonial_image; ?>" width="70" height="70" style="margin-left: 9px; margin-right: 5px;">
         <div class="input-field col s12">
           <div class="file-field input-field">
             <div class="btn">
-              <span>His/Her Image
+              <span>Change Image
               </span>
               <input type="file" name="testimonial_image">
             </div>

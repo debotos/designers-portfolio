@@ -38,7 +38,7 @@ else {
 
     <head>
       <meta charset="UTF-8">
-      <title>Control Panel</title>
+      <title>Control Panel of <?php echo $admin_name;?></title>
       <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
       <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
       <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css" />
@@ -128,15 +128,52 @@ else {
           if(isset($_GET['about'])){
             include("about.php");
           }
+  
+          if(isset($_GET['messages'])){
+            include("messages.php");
+          }
+  
+          if(isset($_GET['messages_delete'])){
+            include("messages_delete.php");
+          }
+  
+          if(isset($_GET['skills'])){
+            include("skills.php");
+          }
+  
+          if(isset($_GET['skills_delete'])){
+            include("skills_delete.php");
+          }
+          
+          if(isset($_GET['skills_add'])){
+            include("skills_add.php");
+          }
+  
+          if(isset($_GET['what_i_do'])){
+            include("what_i_do.php");
+          }
+  
+          if(isset($_GET['what_i_do_add'])){
+            include("what_i_do_add.php");
+          }
+  
+          if(isset($_GET['what_i_do_delete'])){
+            include("what_i_do_delete.php");
+          }
+  
+          if(isset($_GET['what_i_do_edit'])){
+            include("what_i_do_edit.php");
+          }
+          
 
         ?>
 
         </main>
         <footer class="page-footer">
           <div class="footer-copyright">
-            <div class="container">
+            <div class="container" style="text-align: center;">
               ©
-              <?php echo date("Y"); ?> All rights reserved.
+              <?php echo date("Y"); ?> All rights reserved <?php echo $admin_name;?>.
             </div>
           </div>
         </footer>

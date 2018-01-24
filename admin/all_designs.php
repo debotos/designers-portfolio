@@ -14,7 +14,7 @@ else {
       </h1>
     </div>
     <!--Main coading of View All design Start-->
-
+    <div style="margin-left: 3%; margin-right: 3%;">
     <table class="responsive-table centered highlight bordered">
       <!-- table table-bordered table-hover table-striped Starts -->
       <thead>
@@ -44,25 +44,24 @@ $design_category = $row_design['category'];
 $design_image = $row_design['image'];
 $design_info = $row_design['info'];
 ?>
-          <tr>
+          <tr class="card white-grey darken-1 hoverable">
            <td>
               <img src="assets/img/design/<?php echo $design_image; ?>" width="60" height="60">
             </td>
             <td>
               <?php echo $design_info; ?>
             </td>
-            <td>
-              <?php echo $design_category; ?>
+            <td style="color: darkblue;">
+              <strong><?php echo $design_category; ?></strong>
             </td> 
             <td>
-              <a href="index.php?design_edit=<?php echo $design_id; ?>">
-              <i class="fa fa-pencil-square-o"></i> Edit
+              <a class="btn-floating btn-small waves-effect waves-light red" href="index.php?design_edit=<?php echo $design_id; ?>">
+              <i class="material-icons">edit</i>
           </a>
             </td>
             <td>
-              <a href="index.php?design_delete=<?php echo $design_id; ?>&image=<?php echo $design_image; ?>">
-            <i class="fa fa-trash-o">
-            </i> Delete
+              <a class="btn-floating btn-small waves-effect waves-light red" href="index.php?design_delete=<?php echo $design_id; ?>&image=<?php echo $design_image; ?>">
+            <i class="material-icons">delete</i>
           </a>
             </td>
           </tr>
@@ -70,6 +69,7 @@ $design_info = $row_design['info'];
       </tbody>
       <!-- tbody Ends -->
     </table>
+    </div>
     <!-- table table-bordered table-hover table-striped Ends -->
     <!--Main coading of View All design Ends-->
   </section>

@@ -45,31 +45,30 @@ else {
           $testimonial_star = $row_testimonial['star'];
           $testimonial_description = $row_testimonial['description'];
         ?>
-            <tr>
-              <td>
+            <tr class="card white-grey darken-1 hoverable">
+              <td style="color: green;">
                 <strong><?php echo $testimonial_name; ?></strong>
               </td>
               <td>
                 <img src="assets/img/testimonial/<?php echo $testimonial_image; ?>" width="60" height="60">
               </td>
-              <td>
+              <td  style="color: orange;">
                 <strong><?php echo $testimonial_position; ?></strong>
               </td>
-              <td>
+              <td style="color: #9f1d1d;">
                 <strong><?php echo $testimonial_star; ?></strong>
               </td>
-              <td>
+              <td style="color: darkblue; border: 2px solid yellow;">
                 <strong><?php echo $testimonial_description; ?></strong>
               </td>
               <td>
-                <a href="index.php?testimonial_edit=<?php echo $testimonial_id; ?>">
-                  <i class="fa fa-pencil-square-o"></i> Edit
+                <a class="btn-floating btn-small waves-effect waves-light red" href="index.php?testimonial_edit=<?php echo $testimonial_id; ?>">
+                   <i class="material-icons">edit</i>
                 </a>
               </td>
               <td>
-                <a href="index.php?testimonial_delete=<?php echo $testimonial_id; ?>&image=<?php echo $testimonial_image; ?>">
-                  <i class="fa fa-trash-o">
-            </i> Delete
+                <a class="btn-floating btn-small waves-effect waves-light red" href="index.php?testimonial_delete=<?php echo $testimonial_id; ?>&image=<?php echo $testimonial_image; ?>">
+                  <i class="material-icons">delete</i>
                 </a>
               </td>
             </tr>

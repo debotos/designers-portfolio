@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 23, 2018 at 06:41 PM
+-- Generation Time: Jan 24, 2018 at 03:01 PM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.8
 
@@ -40,7 +40,7 @@ CREATE TABLE `about` (
 --
 
 INSERT INTO `about` (`id`, `first_name`, `full_name`, `who_am_i`) VALUES
-(1, 'Debotos', 'Debotos Das', 'On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who  every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted.');
+(1, 'Debotos', 'Debotos Das', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo animi soluta ratione quisquam, dicta ab cupiditate iure eaque? Repellendus voluptatum, magni impedit eaque delectus, beatae maxime temporibus maiores quibusdam quasi.Rem magnam ad perferendis iusto sint tempora ea voluptatibus iure, animi excepturi modi aut possimus in hic molestias repellendus illo ullam odit quia velit. Rem magnam ad perferendis iusto sint tempora ea voluptatibus iure, animi excepturi modi aut possimus in hic molestias repellendus illo ullam odit quia velit. Qui expedita sit quo, maxime molestiae. Lorem ipsum dolor sit amet, consectetur adipisicing elit.');
 
 -- --------------------------------------------------------
 
@@ -62,7 +62,8 @@ CREATE TABLE `admins` (
 --
 
 INSERT INTO `admins` (`admin_id`, `admin_name`, `admin_email`, `admin_pass`, `admin_image`, `admin_contact`) VALUES
-(1, 'Debotos Das', 'debotosdas@gmail.com', 'passme', 'download.png', '01790015380');
+(1, 'Debotos Das', 'debotosdas@gmail.com', 'passme', 'download.png', '01790015380'),
+(3, '3434', 'debotosdddas@gmail.com', '3434', 'firebase.png', '343434');
 
 -- --------------------------------------------------------
 
@@ -132,7 +133,51 @@ CREATE TABLE `info` (
 --
 
 INSERT INTO `info` (`id`, `facebook_profile`, `twitter_profile`, `google_plus_profile`, `youtube_profile`, `instagram_profile`, `upwork_profile`, `freelancer_profile`, `mail`, `address`, `phone`) VALUES
-(1, 'https://twitter.com/debotos', 'https://twitter.com/debotos', 'https://twitter.com/debotos', 'https://twitter.com/debotos', 'https://twitter.com/debotos', 'https://twitter.com/debotos', 'https://twitter.com/debotos', 'debotosdas@gmail.com', 'https://twitter.com/debotos', 'https://twitter.com/debotos');
+(1, 'https://twitter.com/debotos', 'https://twitter.com/debotos', 'https://twitter.com/debotos', 'https://twitter.com/debotos', 'https://twitter.com/debotos', 'https://twitter.com/debotos', 'https://twitter.com/debotos', 'debotosdas@gmail.com', 'Doba(9240), Rupsa, Khulna, Bangladesh', '01790015380, 01982134040');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `message`
+--
+
+CREATE TABLE `message` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `subject` varchar(255) NOT NULL,
+  `message` varchar(500) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `message`
+--
+
+INSERT INTO `message` (`id`, `name`, `email`, `subject`, `message`) VALUES
+(1, 'Debotos Das', 'thuindebotosdas@gmail.com', 'Testing Subject', 'll be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\''),
+(2, 'Debotos Das', 'thuindebotosdas@gmail.com', 'Testing Subject', 'll be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\'');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `skills`
+--
+
+CREATE TABLE `skills` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `percentage` smallint(4) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `skills`
+--
+
+INSERT INTO `skills` (`id`, `name`, `percentage`) VALUES
+(1, 'ADOBE PHOTOSHOP', 100),
+(7, 'HTML/CSS', 85),
+(11, 'ADOBE ILLUSTRATOR', 80),
+(12, 'AFTER EFFECTS', 50);
 
 -- --------------------------------------------------------
 
@@ -154,7 +199,30 @@ CREATE TABLE `testimonial` (
 --
 
 INSERT INTO `testimonial` (`id`, `name`, `image`, `position`, `star`, `description`) VALUES
-(2, 'Debotos Das', '5a6752298f7bb_download.png', 'Full Stack Web Developer', '4.5', '            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.          ');
+(2, 'Debotos Das', '5a6752298f7bb_download.png', 'Full Stack Web Developer', '3.5', 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.   ');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `whai_i_do`
+--
+
+CREATE TABLE `whai_i_do` (
+  `id` int(11) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `icon` varchar(255) NOT NULL,
+  `info` varchar(500) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `whai_i_do`
+--
+
+INSERT INTO `whai_i_do` (`id`, `name`, `icon`, `info`) VALUES
+(5, 'UI/UX', 'fa-laptop', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'),
+(7, 'WEB DESIGN', 'fa-desktop', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'),
+(8, 'BRANDING', 'fa-pencil', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.                '),
+(9, 'PRINT DESIGN', 'fa-paint-brush', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.');
 
 --
 -- Indexes for dumped tables
@@ -191,9 +259,27 @@ ALTER TABLE `info`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `message`
+--
+ALTER TABLE `message`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `skills`
+--
+ALTER TABLE `skills`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `testimonial`
 --
 ALTER TABLE `testimonial`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `whai_i_do`
+--
+ALTER TABLE `whai_i_do`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -210,7 +296,7 @@ ALTER TABLE `about`
 -- AUTO_INCREMENT for table `admins`
 --
 ALTER TABLE `admins`
-  MODIFY `admin_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `admin_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `category`
@@ -231,10 +317,28 @@ ALTER TABLE `info`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `message`
+--
+ALTER TABLE `message`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `skills`
+--
+ALTER TABLE `skills`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
 -- AUTO_INCREMENT for table `testimonial`
 --
 ALTER TABLE `testimonial`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `whai_i_do`
+--
+ALTER TABLE `whai_i_do`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
