@@ -29,7 +29,7 @@ else {
         </div>
         <div class="row">
           <div class="input-field col s12">
-            <input id="testimonial_rating" type="number" name="testimonial_rating" required>
+            <input id="testimonial_rating" type="text" name="testimonial_rating" required>
             <label for="testimonial_rating">Rating (ex: 4.5, Max: 5)
             </label>
           </div>

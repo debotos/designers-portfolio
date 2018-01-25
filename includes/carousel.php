@@ -1,4 +1,12 @@
-<div id="video-carousel-example2" class="carousel slide carousel-fade smooth-scroll" data-ride="carousel">
+<?php
+  include("db.php");
+  // Second Query
+  $qurey = "SELECT * FROM `about`";
+  $run_query = mysqli_query($con, $qurey);
+  $result = mysqli_fetch_array($run_query);
+  $full_name = $result['full_name'];
+?>
+  <div id="video-carousel-example2" class="carousel slide carousel-fade smooth-scroll" data-ride="carousel">
     <!--Indicators-->
     <!-- <ol class="carousel-indicators">
     <li data-target="#video-carousel-example2" data-slide-to="0" class="active"></li>
@@ -28,7 +36,7 @@
             <div class="row smooth-scroll">
               <div class="col-md-12">
                 <div class="wow fadeInUp text-center">
-                  <h2 class="display-3 font-bold white-text mb-3">Tanvir Hasan</h2>
+                  <h2 class="display-3 font-bold white-text mb-3"><?php echo $full_name; ?></h2>
                   <h4 class="font-up font-bold white-text pb-5">Graphic designer</h4>
                   <h2 class=" mt-4 white-text">Welcome to my portfolio!</h2>
                 </div>

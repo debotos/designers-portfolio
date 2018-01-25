@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 24, 2018 at 03:01 PM
+-- Generation Time: Jan 25, 2018 at 08:22 AM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.8
 
@@ -62,8 +62,7 @@ CREATE TABLE `admins` (
 --
 
 INSERT INTO `admins` (`admin_id`, `admin_name`, `admin_email`, `admin_pass`, `admin_image`, `admin_contact`) VALUES
-(1, 'Debotos Das', 'debotosdas@gmail.com', 'passme', 'download.png', '01790015380'),
-(3, '3434', 'debotosdddas@gmail.com', '3434', 'firebase.png', '343434');
+(1, 'Debotos Das', 'debotosdas@gmail.com', 'passme', 'download.png', '01790015380');
 
 -- --------------------------------------------------------
 
@@ -105,8 +104,38 @@ CREATE TABLE `design` (
 --
 
 INSERT INTO `design` (`id`, `image`, `info`, `category`) VALUES
-(1, '5a65ac3f23866_download.png', 'update testing', 'T-shirt Design'),
-(5, '5a65a8fdb8ad7_download.png', 'some', 'Business Card');
+(6, '5a68b786249ee_project1.jpg', 'Reference site about Lorem Ipsum.', 'Logo Design'),
+(7, '5a68b79462fad_project2.jpg', 'Reference site about Lorem Ipsum.', 'Logo Design'),
+(8, '5a68b7a130e60_project3.jpg', 'Reference site about Lorem Ipsum.', 'Logo Design'),
+(9, '5a68b7ace35d7_project4.jpg', 'Reference site about Lorem Ipsum.', 'Logo Design'),
+(10, '5a68b7b92e12b_project5.jpg', 'Reference site about Lorem Ipsum.', 'Logo Design'),
+(11, '5a68b7c4d0942_project6.jpg', 'Reference site about Lorem Ipsum.', 'Logo Design'),
+(12, '5a68b7d1335a5_project7.jpg', 'Reference site about Lorem Ipsum.', 'Logo Design'),
+(13, '5a68b7ded041a_project8.jpg', 'Reference site about Lorem Ipsum.', 'Logo Design'),
+(14, '5a68b7ffdd12e_project7.jpg', 'Reference site about Lorem Ipsum.', 'Logo Design'),
+(15, '5a68b80ca82a1_project8.jpg', 'Reference site about Lorem Ipsum.', 'Business Card'),
+(16, '5a68b8184ac09_project6.jpg', 'Reference site about Lorem Ipsum.', 'Business Card'),
+(17, '5a68b8241c104_project5.jpg', 'Reference site about Lorem Ipsum.', 'Business Card'),
+(18, '5a68b82ebc9b8_project4.jpg', 'Reference site about Lorem Ipsum.', 'Business Card'),
+(19, '5a68b83a41163_project1.jpg', 'Reference site about Lorem Ipsum.', 'Banner Ad'),
+(20, '5a68b8479bd40_project2.jpg', 'Reference site about Lorem Ipsum.', 'Banner Ad'),
+(21, '5a68b8533c231_project3.jpg', 'Reference site about Lorem Ipsum.', 'Banner Ad'),
+(22, '5a68b85f10059_project4.jpg', 'Reference site about Lorem Ipsum.', 'Banner Ad'),
+(23, '5a68b86c6a90a_project6.jpg', 'Reference site about Lorem Ipsum.', 'Banner Ad'),
+(24, '5a68b8a307f1e_project6.jpg', 'Reference site about Lorem Ipsum.', 'Photo Album'),
+(25, '5a68b8af15022_project1.jpg', 'Reference site about Lorem Ipsum.', 'Photo Album'),
+(26, '5a68b8ba26d7b_project4.jpg', 'Reference site about Lorem Ipsum.', 'Photo Album'),
+(27, '5a68b8c50c113_project5.jpg', 'Reference site about Lorem Ipsum.', 'Photo Album'),
+(28, '5a68b8d40a367_project4.jpg', 'Reference site about Lorem Ipsum.', 'Photo Album'),
+(29, '5a68b8f2bd688_image.png', 'Reference site about Lorem Ipsum.', 'T-shirt Design'),
+(30, '5a68b8ff25715_7.jpeg', 'Reference site about Lorem Ipsum.', 'T-shirt Design'),
+(31, '5a68b912d8a0a_5.jpg', 'Reference site about Lorem Ipsum.', 'T-shirt Design'),
+(32, '5a68b91e1027e_4.jpg', 'Reference site about Lorem Ipsum.', 'T-shirt Design'),
+(33, '5a68b928f3e9f_3.jpeg', 'Reference site about Lorem Ipsum.', 'T-shirt Design'),
+(34, '5a68b9339772d_2.jpeg', 'Reference site about Lorem Ipsum.', 'T-shirt Design'),
+(35, '5a68b93e490ef_1.jpg', 'Reference site about Lorem Ipsum.', 'T-shirt Design'),
+(36, '5a6957f33423c_apple_green-normal.jpg', 'Reference site about Lorem Ipsum.', 'Banner Ad'),
+(37, '5a69583813c72_secure.jpg', 'Reference site about Lorem Ipsum.', 'Photo Album');
 
 -- --------------------------------------------------------
 
@@ -155,7 +184,8 @@ CREATE TABLE `message` (
 
 INSERT INTO `message` (`id`, `name`, `email`, `subject`, `message`) VALUES
 (1, 'Debotos Das', 'thuindebotosdas@gmail.com', 'Testing Subject', 'll be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\''),
-(2, 'Debotos Das', 'thuindebotosdas@gmail.com', 'Testing Subject', 'll be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\'');
+(2, 'Debotos Das', 'thuindebotosdas@gmail.com', 'Testing Subject', 'll be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\''),
+(5, 'Ripon Das', 'ripondas59@gmail.com', 'Congratulation', 'Website looking greate. And Message is working.');
 
 -- --------------------------------------------------------
 
@@ -175,9 +205,9 @@ CREATE TABLE `skills` (
 
 INSERT INTO `skills` (`id`, `name`, `percentage`) VALUES
 (1, 'ADOBE PHOTOSHOP', 100),
-(7, 'HTML/CSS', 85),
-(11, 'ADOBE ILLUSTRATOR', 80),
-(12, 'AFTER EFFECTS', 50);
+(2, 'ADOBE ILLUSTRATOR', 80),
+(3, 'AFTER EFFECTS', 50),
+(4, 'HTML/CSS', 85);
 
 -- --------------------------------------------------------
 
@@ -199,7 +229,9 @@ CREATE TABLE `testimonial` (
 --
 
 INSERT INTO `testimonial` (`id`, `name`, `image`, `position`, `star`, `description`) VALUES
-(2, 'Debotos Das', '5a6752298f7bb_download.png', 'Full Stack Web Developer', '3.5', 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.   ');
+(1, 'Debotos Das', '5a696ba4ddf4b_1.gif', 'Full Stack Web Developer', '5.0', 'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt.'),
+(2, 'John Doe', '5a696ae3324eb_download.png', 'Founder at ET Company', '4.5', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos id officiis hic tenetur quae quaerat ad velit ab. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore cum accusamus eveniet molestias voluptatum inventore laboriosam labore sit, aspernatur praesentium iste impedit quidem.'),
+(3, 'Debotos', '5a696b542d26d_giphy.gif', 'Photographer at Studio LA', '3.5', '            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt.          ');
 
 -- --------------------------------------------------------
 
@@ -308,7 +340,7 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `design`
 --
 ALTER TABLE `design`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT for table `info`
@@ -320,7 +352,7 @@ ALTER TABLE `info`
 -- AUTO_INCREMENT for table `message`
 --
 ALTER TABLE `message`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `skills`
@@ -332,7 +364,7 @@ ALTER TABLE `skills`
 -- AUTO_INCREMENT for table `testimonial`
 --
 ALTER TABLE `testimonial`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `whai_i_do`

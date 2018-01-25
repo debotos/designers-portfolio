@@ -46,7 +46,7 @@ else {
             <div style="display: flex; flex-direction: row;">
               <i style="font-size: 100px;" class="material-icons">markunread</i>
               <p style="font-size: 200px; overflow-x: auto;">
-                <?php echo $testimonial_count; ?>
+                <?php echo $message_count; ?>
               </p>
             </div>
           </div>

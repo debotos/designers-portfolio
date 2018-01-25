@@ -173,7 +173,7 @@ else {
           <div class="footer-copyright">
             <div class="container" style="text-align: center;">
               ©
-              <?php echo date("Y"); ?> All rights reserved <?php echo $admin_name;?>.
+              <?php echo date("Y"); ?> All rights reserved by <?php echo $admin_name;?>.
             </div>
           </div>
         </footer>

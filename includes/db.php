@@ -1,0 +1,1 @@
+<?php $con = mysqli_connect("localhost","root","","designer_portfolio"); ?>

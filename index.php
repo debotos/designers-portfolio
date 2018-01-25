@@ -24,6 +24,9 @@
 
   <!-- Template styles -->
   <link href="css/base.css" rel="stylesheet">
+  
+  <!--Fancybox Style-->
+  <link href="css/jquery.fancybox.min.css" rel="stylesheet">
 
   <!--Custom Style-->
   <link href="css/custom.css" rel="stylesheet">
@@ -73,7 +76,7 @@
               <div class="row py-4">
                 <div class="col-md-12 mt-2">
                   <!--Section heading-->
-                  <h5 class="text-center white-text mb-2 wow fadeIn" data-wow-delay="0.2s">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</h5>
+                  <h5 class="text-center white-text mb-2 wow fadeIn" data-wow-delay="0.2s">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h5>
                 </div>
               </div>
             </div>
@@ -106,6 +109,8 @@
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
         <!-- MDB core JavaScript -->
         <script type="text/javascript" src="js/mdb.min.js"></script>
+        <!-- Fancybox JavaScript -->
+        <script type="text/javascript" src="js/jquery.fancybox.min.js"></script>
 
         <script type="text/javascript" src="js/tether.min.js"></script>
 
